@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/Images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/Images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/Images/favicon/site.webmanifest">
+
+    <title>IEEE KJSIT Students Chapter</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/CSS/ieee-modern.css">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/85bfee30af.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <img src="assets/logo.PNG" alt="IEEE KJSIT Logo">
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="team/team.html" class="nav-link">Team</a></li>
+                    <li class="nav-item"><a href="events/events.html" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="Legacy/legacy.html" class="nav-link">Legacy</a></li>
+                </ul>
+                <button class="mobile-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">IEEE KJSIT Students Chapter</h1>
+                <p class="hero-subtitle fade-in-delay-1">Advancing Technology for Humanity</p>
+                <div class="hero-buttons fade-in-delay-2">
+                    <a href="#about" class="btn btn-primary">Discover More</a>
+                    <a href="events/events.html" class="btn btn-outline">Our Events</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll fade-in-delay-3">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- SLIDER SECTION -->
+    <section class="slider-container section" id="events-preview">
+        <div class="container">
+            <div class="section-title text-center mb-4">
+                <h2>Featured Events</h2>
+                <p>Explore our recent technical activities and events</p>
+            </div>
+        </div>
+        
+        <div class="slider" id="slider">
+            <div class="slide active" style="background-image: url('assets/images/home/carousel/ar-vr.jpg')">
+                <div class="slide-overlay">
+                    <h2 class="slide-title">AR-VR Experience</h2>
+                    <p class="slide-subtitle">Immersive technology workshop during Renaissance</p>
+                    <a href="./events/events.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('assets/images/home/carousel/FIFA-22.JPG')">
+                <div class="slide-overlay">
+                    <h2 class="slide-title">Gaming Tournament</h2>
+                    <p class="slide-subtitle">Competitive gaming event during Renaissance</p>
+                    <a href="./events/events.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('assets/images/home/carousel/TPP.JPG')">
+                <div class="slide-overlay">
+                    <h2 class="slide-title">Technical Paper Presentation</h2>
+                    <p class="slide-subtitle">Showcasing innovative research during Renaissance</p>
+                    <a href="./events/events.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('assets/images/home/carousel/deathrace.jpg')">
+                <div class="slide-overlay">
+                    <h2 class="slide-title">Death Race</h2>
+                    <p class="slide-subtitle">Robotics competition during Renaissance</p>
+                    <a href="./events/events.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+
+            <div class="slider-arrows">
+                <div class="slider-arrow" id="prevSlide">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="slider-arrow" id="nextSlide">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            
+            <div class="slider-nav" id="sliderNav"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-title text-center mb-4">
+                <h2>About Us</h2>
+                <p>Discover the IEEE KJSIT Student Branch</p>
+            </div>
+            <div class="about-container">
+                <div class="about-image fade-in">
+                    <img src="assets/images/college.png" alt="K. J. Somaiya Institute of Technology">
+                </div>
+                <div class="about-content fade-in-delay-1">
+                    <h3 class="about-title">K. J. Somaiya Institute of Technology</h3>
+                    <div class="about-text">
+                        <p>KJSIT has been accredited by NAAC with 'A' grade (3.21 CGPA) for 5 years. Three programs of KJSIT have been accredited by National Board of Accreditation (NBA). KJSIT has been presented the Best College Award by the University of Mumbai for A.Y. 2018-19 (Urban Region), CSI (Mumbai Chapter) and ISTE (MH and Goa Section).</p>
+                        <p>IEEE KJSIT commits to foster technological innovation and excellence for the benefit of humanity. We nurture and promote innovative technical ideas, solicit and refine quality technical information, and support personal development on all fronts in an individual.</p>
+                    </div>
+                    <a href="https://kjsieit.s3.ap-south-1.amazonaws.com/Student+Life/Student+Tech-Pro+Committees/IEEE+21-22.pdf" class="btn btn-primary mt-3">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-title text-center mb-4">
+                <h2>Our Leadership</h2>
+                <p>Meet the visionaries guiding our IEEE Student Branch</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <img src="assets/images/home/Faculty/profile/principal.png" alt="Dr. Suresh Ukarande" class="testimonial-image">
+                        <div class="testimonial-info">
+                            <h4>Dr. Suresh Ukarande</h4>
+                            <p>PRINCIPAL, KJSIT</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>With an ideology that the root of innovation is 'Interest', the curriculum offers a wide range of elective courses grouped into core and inter-disciplinary domains. At par with international engineering education, the students can choose to study courses concerning areas of their interests.</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in-delay-1">
+                    <div class="testimonial-header">
+                        <img src="assets/images/home/Faculty/profile/vice-principal.png" alt="Dr. Sunita Patil" class="testimonial-image">
+                        <div class="testimonial-info">
+                            <h4>Dr. Sunita Patil</h4>
+                            <p>VICE PRINCIPAL, KJSIT</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>KJSIT's Undergraduate and Postgraduate programs are focused for the academic as well as all-round professional, holistic and social development of its students through an array of multi-skilled, professional, extension, co-curricular, extracurricular and lifelong learning activities.</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <img src="assets/images/home/Faculty/profile/Prof.SandeepMishra.png" alt="Prof. Sandeep Mishra" class="testimonial-image">
+                        <div class="testimonial-info">
+                            <h4>Prof. Sandeep Mishra</h4>
+                            <p>IEEE COUNSELLOR, KJSIT</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>We at KJSIT are focused at student's all round academic and personal development. I believe the IEEE provides a professional and capable platform for multi-skilled, professional, co-curricular, extracurricular and lifelong learning activities which develop an efficient engineer down the road.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in-delay-1">
+                    <div class="testimonial-header">
+                        <img src="assets/images/home/Faculty/profile/Prof.PranaliHatode.png" alt="Prof. Pranali Hatode" class="testimonial-image">
+                        <div class="testimonial-info">
+                            <h4>Prof. Pranali Hatode</h4>
+                            <p>IEEE COORDINATOR, KJSIT</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>With its vision and mission in mind, The IEEE will always continue to uplift the engineers to get up skilled and develop a foresight in their respective fields for the betterment of themselves and the society at large, wherever they may be.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-title text-center mb-4">
+                <h2>Contact Us</h2>
+                <p>Get in touch with the IEEE KJSIT Student Branch</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <h3 class="contact-title">Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:ieee.tech@somaiya.edu">ieee.tech@somaiya.edu</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>K. J. Somaiya Institute of Technology, Mumbai-22.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/ieee.kjsieit/?hl=en" class="social-link" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/ieee-kjsieit/about/" class="social-link" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/IEEEKJSIEIT/" class="social-link" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://mobile.twitter.com/ieee_kjsieit" class="social-link" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in-delay-1">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Enter your message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="assets/logo.PNG" alt="IEEE KJSIT Logo">
+                    </div>
+                    <p class="footer-about">IEEE KJSIT Student Branch is committed to fostering technological innovation and excellence for the benefit of humanity through various technical activities and events.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#hero">Home</a></li>
+                        <li class="footer-link"><a href="#about">About</a></li>
+                        <li class="footer-link"><a href="team/team.html">Team</a></li>
+                        <li class="footer-link"><a href="events/events.html">Events</a></li>
+                        <li class="footer-link"><a href="Legacy/legacy.html">Legacy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <div class="footer-contact">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:ieee.tech@somaiya.edu">ieee.tech@somaiya.edu</a></p>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>K. J. Somaiya Institute of Technology, Mumbai-22.</p>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fas fa-file-pdf"></i>
+                        <p><a href="assets/doc/IEEE+21-22.pdf" download>Download Brochure</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; IEEE - KJSIT 2024 - 25. All Rights Reserved.</p>
+                <p>Developed by Qasim Kharodia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Slider Functionality
+        const slides = document.querySelectorAll('.slide');
+        const sliderNav = document.getElementById('sliderNav');
+        const prevSlide = document.getElementById('prevSlide');
+        const nextSlide = document.getElementById('nextSlide');
+        let currentSlide = 0;
+        
+        // Create slider dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('slider-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            sliderNav.appendChild(dot);
+        });
+        
+        // Function to show a specific slide
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            document.querySelectorAll('.slider-dot')[currentSlide].classList.remove('active');
+            
+            currentSlide = index;
+            
+            slides[currentSlide].classList.add('active');
+            document.querySelectorAll('.slider-dot')[currentSlide].classList.add('active');
+        }
+        
+        // Previous slide
+        prevSlide.addEventListener('click', () => {
+            let index = currentSlide - 1;
+            if (index < 0) index = slides.length - 1;
+            goToSlide(index);
+        });
+        
+        // Next slide
+        nextSlide.addEventListener('click', () => {
+            let index = currentSlide + 1;
+            if (index >= slides.length) index = 0;
+            goToSlide(index);
+        });
+        
+        // Auto slide
+        setInterval(() => {
+            let index = currentSlide + 1;
+            if (index >= slides.length) index = 0;
+            goToSlide(index);
+        }, 5000);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically handle the form submission with AJAX
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
