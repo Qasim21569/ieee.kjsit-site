@@ -32,7 +32,7 @@
                 <ul id="sidemenu">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../index.html#about">About</a></li>
-                    <li><a href="#team-hero">Team</a></li>
+                    <li><a href="#team-hero" class="active">Team</a></li>
                     <li><a href="../events/events.html">Events</a></li>
                     <li><a href="../Legacy/legacy.html">Legacy</a></li>
                 </ul>
@@ -45,9 +45,23 @@
 
     <!-- Team Hero Section -->
     <section class="team-hero" id="team-hero">
+        <div class="particles-container" id="particles-js"></div>
         <div class="team-hero-content">
-            <h1 class="team-hero-title" data-aos="fade-up">Meet Our Team</h1>
-            <p class="team-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Dedicated individuals working together to make IEEE KJSIT extraordinary</p>
+            <div class="tenure-badge" data-aos="fade-down">
+                <span>IEEE KJSIT 2024-25</span>
+            </div>
+            <h1 class="team-hero-title" data-aos="fade-up">
+                <span class="text-gradient">Visionary</span><br>
+                Leaders of Tomorrow
+            </h1>
+            <div class="team-hero-divider" data-aos="fade-up" data-aos-delay="100"></div>
+            <p class="team-hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Meet the dedicated individuals working together to make IEEE KJSIT extraordinary
+            </p>
+            <div class="hero-scroll-indicator" data-aos="fade-up" data-aos-delay="400">
+                <span>Scroll to Explore</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
         <div class="team-hero-wave">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -62,34 +76,42 @@
             <h2 class="section-title" data-aos="fade-up">Leadership</h2>
             <div class="leadership-container">
                 <!-- Chairperson -->
-                <div class="leadership-member" data-aos="fade-up">
-                    <div class="leadership-image">
-                        <img src="../assets/images/team/dummy.jpeg" alt="Chairperson">
-                        <div class="leadership-social">
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <div class="team-member leadership-flip" data-aos="fade-up">
+                    <div class="team-member-inner">
+                        <div class="team-member-front">
+                            <img src="../assets/images/team/dummy.jpeg" alt="Chairperson">
+                            <h3>Madhav Asawa</h3>
+                            <span>Chairperson</span>
                         </div>
-                    </div>
-                    <div class="leadership-info">
-                        <h3>Madhav Asawa</h3>
-                        <span>Chairperson</span>
-                        <p>Leading IEEE KJSIT with vision and dedication, driving innovation and growth across all initiatives.</p>
+                        <div class="team-member-back">
+                            <h3>Madhav Asawa</h3>
+                            <span>Chairperson</span>
+                            <p>Leading IEEE KJSIT with vision and dedication, driving innovation and growth across all initiatives.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Vice Chairperson -->
-                <div class="leadership-member" data-aos="fade-up" data-aos-delay="200">
-                    <div class="leadership-image">
-                        <img src="../assets/images/team/dummy.jpeg" alt="Vice Chairperson">
-                        <div class="leadership-social">
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <div class="team-member leadership-flip" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-member-inner">
+                        <div class="team-member-front">
+                            <img src="../assets/images/team/dummy.jpeg" alt="Vice Chairperson">
+                            <h3>Saif Bhure</h3>
+                            <span>Vice Chairperson</span>
                         </div>
-                    </div>
-                    <div class="leadership-info">
-                        <h3>Saif Bhure</h3>
-                        <span>Vice Chairperson</span>
-                        <p>Supporting and driving IEEE KJSIT's initiatives forward, ensuring seamless coordination between all teams.</p>
+                        <div class="team-member-back">
+                            <h3>Saif Bhure</h3>
+                            <span>Vice Chairperson</span>
+                            <p>Supporting and driving IEEE KJSIT's initiatives forward, ensuring seamless coordination between all teams.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,141 +123,150 @@
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Core Team</h2>
             <div class="team-grid">
-                <!-- Chief Marketing Officer -->
-                <div class="team-member" data-aos="fade-up">
-                    <div class="team-member-inner">
-                        <div class="team-member-front">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Chief Marketing Officer">
-                            <h3>Bhavya Desai</h3>
-                            <span>Chief Marketing Officer</span>
+                <!-- First Row -->
+                <div class="team-row">
+                    <!-- Chief Marketing Officer -->
+                    <div class="team-member" data-aos="fade-up">
+                        <div class="team-member-inner">
+                            <div class="team-member-front">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Chief Marketing Officer">
+                                <h3>Bhavya Desai</h3>
+                                <span>Chief Marketing Officer</span>
+                            </div>
+                            <div class="team-member-back">
+                                <h3>Bhavya Desai</h3>
+                                <span>Chief Marketing Officer</span>
+                                <p>Driving marketing strategies and brand growth for IEEE KJSIT.</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="team-member-back">
-                            <h3>Alex Johnson</h3>
-                            <span>Chief Marketing Officer</span>
-                            <p>Driving marketing strategies and brand growth for IEEE KJSIT.</p>
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                    <!-- Public Relations Officer -->
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member-inner">
+                            <div class="team-member-front">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Public Relations Officer">
+                                <h3>Sarah Williams</h3>
+                                <span>Public Relations Officer</span>
+                            </div>
+                            <div class="team-member-back">
+                                <h3>Sarah Williams</h3>
+                                <span>Public Relations Officer</span>
+                                <p>Managing external relations and communications with partners and stakeholders.</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Media Manager -->
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-member-inner">
+                            <div class="team-member-front">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Digital Media Manager">
+                                <h3>Michael Brown</h3>
+                                <span>Digital Media Manager</span>
+                            </div>
+                            <div class="team-member-back">
+                                <h3>Michael Brown</h3>
+                                <span>Digital Media Manager</span>
+                                <p>Creating and managing digital content across all platforms.</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Public Relations Officer -->
-                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="team-member-inner">
-                        <div class="team-member-front">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Public Relations Officer">
-                            <h3>Sarah Williams</h3>
-                            <span>Public Relations Officer</span>
+                <!-- Second Row -->
+                <div class="team-row">
+                    <!-- Treasurer -->
+                    <div class="team-member" data-aos="fade-up">
+                        <div class="team-member-inner">
+                            <div class="team-member-front">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Treasurer">
+                                <h3>Kushaan Bhat</h3>
+                                <span>Treasurer</span>
+                            </div>
+                            <div class="team-member-back">
+                                <h3>Kushaan Bhat</h3>
+                                <span>Treasurer</span>
+                                <p>Managing finances and budgeting for all IEEE KJSIT activities.</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="team-member-back">
-                            <h3>Sarah Williams</h3>
-                            <span>Public Relations Officer</span>
-                            <p>Managing external relations and communications with partners and stakeholders.</p>
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                    <!-- Chief Executive Officer -->
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member-inner">
+                            <div class="team-member-front">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Chief Executive Officer">
+                                <h3>Ikrama Sunasra</h3>
+                                <span>Chief Executive Officer</span>
+                            </div>
+                            <div class="team-member-back">
+                                <h3>Ikrama Sunasra</h3>
+                                <span>Chief Executive Officer</span>
+                                <p>Overseeing operations and strategic planning for IEEE KJSIT.</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chief Operating Officer -->
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-member-inner">
+                            <div class="team-member-front">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Chief Operating Officer">
+                                <h3>Ryan Garcia</h3>
+                                <span>Chief Operating Officer</span>
+                            </div>
+                            <div class="team-member-back">
+                                <h3>Ryan Garcia</h3>
+                                <span>Chief Operating Officer</span>
+                                <p>Managing day-to-day operations and ensuring smooth execution of all events.</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Digital Media Manager -->
-                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
-                    <div class="team-member-inner">
-                        <div class="team-member-front">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Digital Media Manager">
-                            <h3>Michael Brown</h3>
-                            <span>Digital Media Manager</span>
-                        </div>
-                        <div class="team-member-back">
-                            <h3>Michael Brown</h3>
-                            <span>Digital Media Manager</span>
-                            <p>Creating and managing digital content across all platforms.</p>
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                <!-- Third Row (Centered) -->
+                <div class="team-row-center">
+                    <!-- Chief Technical Officer -->
+                    <div class="team-member" data-aos="fade-up">
+                        <div class="team-member-inner">
+                            <div class="team-member-front">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Chief Technical Officer">
+                                <h3>Akash Adhyapak</h3>
+                                <span>Chief Technical Officer</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Treasurer -->
-                <div class="team-member" data-aos="fade-up">
-                    <div class="team-member-inner">
-                        <div class="team-member-front">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Treasurer">
-                            <h3>Kushaan Bhat</h3>
-                            <span>Treasurer</span>
-                        </div>
-                        <div class="team-member-back">
-                            <h3>Kushaan Bhat</h3>
-                            <span>Treasurer</span>
-                            <p>Managing finances and budgeting for all IEEE KJSIT activities.</p>
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Chief Executive Officer -->
-                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="team-member-inner">
-                        <div class="team-member-front">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Chief Executive Officer">
-                            <h3>Ikrama Sunasra</h3>
-                            <span>Chief Executive Officer</span>
-                        </div>
-                        <div class="team-member-back">
-                            <h3>Ikrama Sunasra</h3>
-                            <span>Chief Executive Officer</span>
-                            <p>Overseeing operations and strategic planning for IEEE KJSIT.</p>
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Chief Operating Officer -->
-                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
-                    <div class="team-member-inner">
-                        <div class="team-member-front">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Chief Operating Officer">
-                            <h3>Ryan Garcia</h3>
-                            <span>Chief Operating Officer</span>
-                        </div>
-                        <div class="team-member-back">
-                            <h3>Ryan Garcia</h3>
-                            <span>Chief Operating Officer</span>
-                            <p>Managing day-to-day operations and ensuring smooth execution of all events.</p>
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Chief Technical Officer -->
-                <div class="team-member team-member-center" data-aos="fade-up">
-                    <div class="team-member-inner">
-                        <div class="team-member-front">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Chief Technical Officer">
-                            <h3>Akash Adhyapak</h3>
-                            <span>Chief Technical Officer</span>
-                        </div>
-                        <div class="team-member-back">
-                            <h3>Akash Adhyapak</h3>
-                            <span>Chief Technical Officer</span>
-                            <p>Leading technical initiatives and innovations for IEEE KJSIT.</p>
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            <div class="team-member-back">
+                                <h3>Akash Adhyapak</h3>
+                                <span>Chief Technical Officer</span>
+                                <p>Leading technical initiatives and innovations for IEEE KJSIT.</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -250,105 +281,111 @@
             <h2 class="section-title" data-aos="fade-up">Sub-Core Team</h2>
             <div class="sub-core-container">
                 <div class="sub-core-grid">
-                    <!-- Joint CEO -->
-                    <div class="sub-core-member" data-aos="fade-up">
-                        <div class="sub-core-image">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Joint CEO">
-                            <div class="sub-core-overlay">
-                                <div class="sub-core-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <!-- First Row -->
+                    <div class="sub-core-row">
+                        <!-- Joint CEO -->
+                        <div class="sub-core-member" data-aos="fade-up">
+                            <div class="sub-core-image">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Joint CEO">
+                                <div class="sub-core-overlay">
+                                    <div class="sub-core-social">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="sub-core-info">
+                                <h3>Daniel Wilson</h3>
+                                <span>Joint CEO</span>
+                            </div>
                         </div>
-                        <div class="sub-core-info">
-                            <h3>Daniel Wilson</h3>
-                            <span>Joint CEO</span>
+
+                        <!-- Joint PRO -->
+                        <div class="sub-core-member" data-aos="fade-up" data-aos-delay="100">
+                            <div class="sub-core-image">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Joint PRO">
+                                <div class="sub-core-overlay">
+                                    <div class="sub-core-social">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-core-info">
+                                <h3>Olivia Martinez</h3>
+                                <span>Joint PRO</span>
+                            </div>
+                        </div>
+
+                        <!-- Joint CTO -->
+                        <div class="sub-core-member" data-aos="fade-up" data-aos-delay="200">
+                            <div class="sub-core-image">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Joint CTO">
+                                <div class="sub-core-overlay">
+                                    <div class="sub-core-social">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-core-info">
+                                <h3>Noah Anderson</h3>
+                                <span>Joint CTO</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Joint PRO -->
-                    <div class="sub-core-member" data-aos="fade-up" data-aos-delay="100">
-                        <div class="sub-core-image">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Joint PRO">
-                            <div class="sub-core-overlay">
-                                <div class="sub-core-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <!-- Second Row -->
+                    <div class="sub-core-row">
+                        <!-- Joint Treasurer -->
+                        <div class="sub-core-member" data-aos="fade-up">
+                            <div class="sub-core-image">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Joint Treasurer">
+                                <div class="sub-core-overlay">
+                                    <div class="sub-core-social">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="sub-core-info">
+                                <h3>James Taylor</h3>
+                                <span>Joint Treasurer</span>
+                            </div>
                         </div>
-                        <div class="sub-core-info">
-                            <h3>Olivia Martinez</h3>
-                            <span>Joint PRO</span>
-                        </div>
-                    </div>
 
-                    <!-- Joint CTO -->
-                    <div class="sub-core-member" data-aos="fade-up" data-aos-delay="100">
-                        <div class="sub-core-image">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Joint CTO">
-                            <div class="sub-core-overlay">
-                                <div class="sub-core-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                        <!-- Joint DCM -->
+                        <div class="sub-core-member" data-aos="fade-up" data-aos-delay="100">
+                            <div class="sub-core-image">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Joint DCM">
+                                <div class="sub-core-overlay">
+                                    <div class="sub-core-social">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="sub-core-info">
+                                <h3>Isabella Clark</h3>
+                                <span>Joint DCM</span>
+                            </div>
                         </div>
-                        <div class="sub-core-info">
-                            <h3>Noah Anderson</h3>
-                            <span>Joint CTO</span>
-                        </div>
-                    </div>
 
-                    <!-- Joint Treasurer -->
-                    <div class="sub-core-member" data-aos="fade-up">
-                        <div class="sub-core-image">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Joint Treasurer">
-                            <div class="sub-core-overlay">
-                                <div class="sub-core-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                        <!-- Joint Secretary -->
+                        <div class="sub-core-member" data-aos="fade-up" data-aos-delay="200">
+                            <div class="sub-core-image">
+                                <img src="../assets/images/team/dummy.jpeg" alt="Joint Secretary">
+                                <div class="sub-core-overlay">
+                                    <div class="sub-core-social">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="sub-core-info">
-                            <h3>James Taylor</h3>
-                            <span>Joint Treasurer</span>
-                        </div>
-                    </div>
-
-                    <!-- Joint DCM -->
-                    <div class="sub-core-member" data-aos="fade-up" data-aos-delay="200">
-                        <div class="sub-core-image">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Joint DCM">
-                            <div class="sub-core-overlay">
-                                <div class="sub-core-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
+                            <div class="sub-core-info">
+                                <h3>Ava Thompson</h3>
+                                <span>Joint Secretary</span>
                             </div>
-                        </div>
-                        <div class="sub-core-info">
-                            <h3>Isabella Clark</h3>
-                            <span>Joint DCM</span>
-                        </div>
-                    </div>
-
-                    <!-- Joint Secretary -->
-                    <div class="sub-core-member sub-core-member-center" data-aos="fade-up">
-                        <div class="sub-core-image">
-                            <img src="../assets/images/team/dummy.jpeg" alt="Joint Secretary">
-                            <div class="sub-core-overlay">
-                                <div class="sub-core-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sub-core-info">
-                            <h3>Ava Thompson</h3>
-                            <span>Joint Secretary</span>
                         </div>
                     </div>
                 </div>
@@ -506,7 +543,7 @@
                         <p><a href="https://www.google.com/maps/place/K.+J.+Somaiya+Institute+of+Technology" style="text-decoration:none"><i class="fa-solid fa-location-dot"></i>K. J. Somaiya Institute of Technology, Mumbai-22.</a></p>
                     </div>
                     <div class="social-icons">
-                        <a href="https://www.instagram.com/ieee.kjsieit/" target="_blank"><i class="fa-brands fa-instagram in"></i></a>
+                        <a href="https://www.instagram.com/ieee.kjsit?igsh=MWJieHY3YXZ2NDVucA==" target="_blank"><i class="fa-brands fa-instagram in"></i></a>
                         <a href="https://www.linkedin.com/company/ieee-kjsieit/" target="_blank"><i class="fa-brands fa-linkedin ln"></i></a>
                         <a href="https://www.facebook.com/IEEEKJSIEIT/" target="_blank"><i class="fa-brands fa-facebook fb"></i></a>
                         <a href="https://twitter.com/ieee_kjsieit" target="_blank"><i class="fa-brands fa-twitter tw"></i></a>
@@ -515,12 +552,15 @@
             </div>
         </div>
         <div class="copyright">
-            <p><i class="fa-regular fa-copyright"></i> IEEE - KJSIT 2024 - 25 | Developed by Qasim Kharodia</p>
+            <p><i class="fa-regular fa-copyright"></i> IEEE - KJSIT 2024 - 25</p>
+            <p class="developer-credit">Designed and Developed by <span class="text-gradient">Qasim Kharodia</span></p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         AOS.init({
             duration: 800,
@@ -535,6 +575,113 @@
         function closemenu() {
             sidemenu.style.right = "-200px";
         }
+        
+        // Initialize particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
     </script>
 </body>
 </html>

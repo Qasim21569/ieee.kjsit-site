@@ -97,6 +97,16 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+/* Active navigation link */
+nav ul li a.active {
+    color: var(--gold);
+}
+
+nav ul li a.active::after {
+    width: 100%;
+    background: var(--gold);
+}
+
 .menu-toggle {
     display: none;
     cursor: pointer;
@@ -114,7 +124,7 @@ nav ul li a:hover::after {
     cursor: pointer;
 }
 
-/* Hero Section */
+/* Team Hero Section */
 .team-hero {
     background: linear-gradient(135deg, #000428, #004e92);
     background-size: cover;
@@ -176,10 +186,39 @@ nav ul li a:hover::after {
 }
 
 .text-gradient {
-    background: linear-gradient(to right, #FFD700, #FFA500);
+    background: linear-gradient(
+        90deg,
+        #FFD700 0%,
+        #FFA500 25%,
+        #FFD700 50%,
+        #FFA500 75%,
+        #FFD700 100%
+    );
+    background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    animation: gradientShift 3s linear infinite;
+}
+
+/* Remove the previous glow effect */
+.text-gradient::before {
+    display: none;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.ieee-highlight {
+    color: var(--gold);
     position: relative;
     display: inline-block;
 }
@@ -234,6 +273,60 @@ nav ul li a:hover::after {
     }
 }
 
+/* Leadership Flip Cards */
+.leadership-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.leadership-flip {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    height: 450px;
+}
+
+.leadership-flip .team-member-front,
+.leadership-flip .team-member-back {
+    padding: 40px;
+}
+
+.leadership-flip .team-member-front img {
+    width: 220px;
+    height: 220px;
+}
+
+.leadership-flip .team-member-front h3 {
+    font-size: 1.8rem;
+}
+
+.leadership-flip .team-member-front span {
+    font-size: 1.2rem;
+}
+
+.leadership-flip .team-member-back h3 {
+    font-size: 2rem;
+}
+
+.leadership-flip .team-member-back span {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.leadership-flip .team-member-back p {
+    margin-bottom: 35px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+    .leadership-flip {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
 /* Section Common Styles */
 .team-section {
     padding: 60px 0;
@@ -259,104 +352,6 @@ nav ul li a:hover::after {
     background: var(--secondary-color);
     margin: 15px auto;
     border-radius: 2px;
-}
-
-/* Leadership Section */
-.leadership-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-}
-
-.leadership-member {
-    flex: 0 0 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-    background: var(--white);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.leadership-member:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.leadership-image {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-}
-
-.leadership-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.leadership-member:hover .leadership-image img {
-    transform: scale(1.1);
-}
-
-.leadership-social {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    background: linear-gradient(to top, rgba(0, 98, 155, 0.9), transparent);
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    transition: bottom 0.3s ease;
-}
-
-.leadership-member:hover .leadership-social {
-    bottom: 0;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    background: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
-    transition: var(--transition);
-}
-
-.social-icon:hover {
-    background: var(--primary-color);
-    color: var(--white);
-    transform: translateY(-3px);
-}
-
-.leadership-info {
-    padding: 30px;
-}
-
-.leadership-info h3 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.leadership-info span {
-    display: block;
-    font-size: 1.1rem;
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-.leadership-info p {
-    color: var(--light-text);
-    line-height: 1.7;
 }
 
 /* Core Team Section */
@@ -872,6 +867,17 @@ nav ul li a:hover::after {
 
 .copyright p i {
     margin-right: 5px;
+}
+
+.developer-credit {
+    margin-top: 10px !important;
+    font-size: 16px !important;
+    font-weight: 500;
+    text-align: center;
+}
+
+.developer-credit .text-gradient {
+    font-weight: 700;
 }
 
 /* Join Section */
