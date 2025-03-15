@@ -591,10 +591,26 @@ nav ul li a.active::after {
 
 /* Admin Team Section */
 .admin-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 30px;
     padding: 20px;
+}
+
+.admin-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.admin-row-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.admin-row-center .admin-member {
+    width: 350px;
 }
 
 .admin-member {
@@ -1065,3 +1081,108 @@ nav ul li a.active::after {
         height: 350px;
     }
  }
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .admin-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .admin-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-row-center .admin-member {
+        width: 100%;
+    }
+}
+
+/* Team Members Section */
+.domain-teams {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 20px;
+}
+
+.domain-team-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.domain-team-center .domain-team {
+    width: 100%;
+    max-width: 600px;
+}
+
+.domain-team {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.domain-team:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.domain-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.domain-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.team-members-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.member-name {
+    padding: 10px 15px;
+    background: var(--background-color);
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.member-name:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Responsive styles for Team Members section */
+@media (max-width: 992px) {
+    .domain-teams {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-members-list {
+        grid-template-columns: 1fr;
+    }
+}
