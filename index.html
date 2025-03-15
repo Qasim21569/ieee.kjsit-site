@@ -39,6 +39,7 @@
                         <li><a href="team/team.html">Team</a></li>
                         <li><a href="events/events.html">Events</a></li>
                         <li><a href="Legacy/legacy.html">Legacy</a></li>
+                        <i class="fas fa-times close-icon" onclick="closemenu()"></i>
                     </ul>
                 <div class="menu-toggle" onclick="openmenu()">
                     <i class="fas fa-bars"></i>
@@ -347,25 +348,32 @@
     <!-- JavaScript -->
     <script>
         // Navigation toggle
-        var sidemenu = document.getElementById("sidemenu");
         function openmenu() {
-            sidemenu.style.right = "0";
-        }
-        function closemenu() {
-            sidemenu.style.right = "-200px";
+            document.getElementById("sidemenu").style.right = "0";
+            document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
         }
         
-        // Add close button to mobile menu
-        if (sidemenu) {
-            // Create close button if it doesn't exist
-            if (!document.querySelector('.close-menu')) {
-                const closeBtn = document.createElement('div');
-                closeBtn.className = 'close-menu';
-                closeBtn.innerHTML = '<i class="fas fa-times"></i>';
-                closeBtn.onclick = closemenu;
-                sidemenu.prepend(closeBtn);
-            }
+        function closemenu() {
+            document.getElementById("sidemenu").style.right = "-250px"; // Match the width in CSS
+            document.body.style.overflow = "auto"; // Re-enable scrolling when menu is closed
         }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const sideMenu = document.getElementById("sidemenu");
+            const menuToggle = document.querySelector(".menu-toggle");
+            
+            if (!sideMenu.contains(event.target) && event.target !== menuToggle && sideMenu.style.right === "0px") {
+                closemenu();
+            }
+        });
+        
+        // Close menu when pressing escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && document.getElementById("sidemenu").style.right === "0px") {
+                closemenu();
+            }
+        });
         
         // Slider Functionality
         const slides = document.querySelectorAll('.slide');

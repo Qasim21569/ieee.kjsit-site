@@ -114,14 +114,14 @@ nav ul li a.active::after {
     color: var(--white);
 }
 
-.close-menu {
-    display: none;
+.close-icon {
     position: absolute;
     top: 20px;
     right: 20px;
     font-size: 24px;
     color: var(--white);
     cursor: pointer;
+    display: none;
 }
 
 /* Team Hero Section */
@@ -982,26 +982,27 @@ nav ul li a.active::after {
         position: fixed;
         background: var(--primary-color);
         top: 0;
-        right: -200px;
-        width: 200px;
+        right: -250px;
+        width: 250px;
         height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
+        padding-top: 60px;
+        z-index: 1000;
+        transition: right 0.5s ease;
         flex-direction: column;
         align-items: center;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
     
     nav ul li {
-        margin: 25px 0;
+        margin: 20px 0;
     }
     
     .menu-toggle {
-   display: block;
+        display: block;
+        z-index: 999;
     }
     
-    .close-menu {
+    .close-icon {
         display: block;
     }
     
@@ -1042,6 +1043,32 @@ nav ul li a.active::after {
     
     .team-row, .sub-core-row {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .domain-teams {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .team-member,
+    .sub-core-member,
+    .admin-member {
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .team-member-front img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .leadership-flip {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+        height: 400px;
     }
 }
 
@@ -1056,7 +1083,7 @@ nav ul li a.active::after {
     }
     
     .team-hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .team-hero-subtitle {
@@ -1081,9 +1108,46 @@ nav ul li a.active::after {
     }
     
     .team-member {
-        height: 350px;
+        height: 320px;
     }
- }
+    
+    .team-member-front img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .team-member-front h3 {
+        font-size: 1.3rem;
+    }
+    
+    .team-member-back {
+        padding: 25px;
+    }
+    
+    .team-member-back h3 {
+        font-size: 1.5rem;
+    }
+    
+    .team-member-back p {
+        font-size: 0.9rem;
+    }
+    
+    .sub-core-image {
+        height: 200px;
+    }
+    
+    .admin-image {
+        height: 200px;
+    }
+    
+    .domain-team {
+        padding: 20px;
+    }
+    
+    .team-members-list {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* Media Queries */
 @media screen and (max-width: 1024px) {

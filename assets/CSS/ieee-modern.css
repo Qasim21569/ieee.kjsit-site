@@ -167,14 +167,15 @@ nav ul li a.active::after {
     color: var(--white);
 }
 
-.close-menu {
-    display: none;
+/* Mobile Menu Close Button */
+.close-icon {
     position: absolute;
     top: 20px;
     right: 20px;
     font-size: 24px;
     color: var(--white);
     cursor: pointer;
+    display: none;
 }
 
 /* Hero Section */
@@ -949,26 +950,29 @@ textarea.form-control {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        z-index: 999;
     }
     
     nav ul {
         background: var(--primary-color);
         position: fixed;
         top: 0;
-        right: -200px;
-        width: 200px;
+        right: -250px; /* Increased width for better usability */
+        width: 250px; /* Increased width for better usability */
         height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
+        padding-top: 60px;
+        z-index: 1000;
+        transition: right 0.5s ease;
         flex-direction: column;
+        align-items: center;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
     
     nav ul li {
-        margin: 25px;
+        margin: 20px 0;
     }
     
-    .close-menu {
+    .close-icon {
         display: block;
     }
     
@@ -978,7 +982,6 @@ textarea.form-control {
     
     .hero-subtitle {
         font-size: 1rem;
-        margin-bottom: 25px;
     }
     
     .hero-buttons {

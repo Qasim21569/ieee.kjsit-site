@@ -35,6 +35,7 @@
                     <li><a href="#team-hero" class="active">Team</a></li>
                     <li><a href="../events/events.html">Events</a></li>
                     <li><a href="../Legacy/legacy.html">Legacy</a></li>
+                    <i class="fas fa-times close-icon" onclick="closemenu()"></i>
                 </ul>
                 <div class="menu-toggle" onclick="openmenu()">
                     <i class="fas fa-bars"></i>
@@ -326,7 +327,7 @@
                         <!-- Joint CEO -->
                         <div class="sub-core-member" data-aos="fade-up">
                             <div class="sub-core-image">
-                                <img src="../assets/images/team/dummy.jpeg" alt="Joint CEO">
+                                <img src="team photos/sub-core/komal.jpg" alt="Joint CEO">
                                 <div class="sub-core-overlay">
                                     <div class="sub-core-social">
                                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -360,10 +361,10 @@
                         <!-- Joint CTO -->
                         <div class="sub-core-member" data-aos="fade-up" data-aos-delay="200">
                             <div class="sub-core-image">
-                                <img src="../assets/images/team/dummy.jpeg" alt="Joint CTO">
+                                <img src="team photos/sub-core/aishwarya.jpeg" alt="Joint CTO">
                                 <div class="sub-core-overlay">
                                     <div class="sub-core-social">
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://www.linkedin.com/in/aishwarya-k-aish8803?trk=contact-info"><i class="fab fa-linkedin-in"></i></a>
                                         <a href="#"><i class="fab fa-instagram"></i></a>
                                     </div>
                                 </div>
@@ -397,7 +398,7 @@
                         <!-- Joint DCM -->
                         <div class="sub-core-member" data-aos="fade-up" data-aos-delay="100">
                             <div class="sub-core-image">
-                                <img src="../assets/images/team/dummy.jpeg" alt="Joint DCM">
+                                <img src="team photos/sub-core/hemant.jpg" alt="Joint DCM">
                                 <div class="sub-core-overlay">
                                     <div class="sub-core-social">
                                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -501,7 +502,7 @@
                     <div class="admin-member" data-aos="fade-up">
                         <div class="admin-content">
                             <div class="admin-image">
-                                <img src="../assets/images/team/dummy.jpeg" alt="DCT Admin">
+                                <img src="team photos/admins/krishna.jpg" alt="DCT Admin">
                             </div>
                             <div class="admin-info">
                                 <h3>Krishna Jogi</h3>
@@ -519,14 +520,14 @@
                     <div class="admin-member" data-aos="fade-up" data-aos-delay="100">
                         <div class="admin-content">
                             <div class="admin-image">
-                                <img src="../assets/images/team/dummy.jpeg" alt="DCT Admin">
+                                <img src="team photos/Jt. Admins/tanya.png" alt="DCT Admin">
                             </div>
                             <div class="admin-info">
                                 <h3>Tanya Kumar</h3>
                                 <span>DCT Admin</span>
                                 <p>Creating digital content and visual materials for IEEE KJSIT events.</p>
                                 <div class="admin-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.linkedin.com/in/tanya-kumar-638751255?trk=contact-info"><i class="fab fa-linkedin-in"></i></a>
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
@@ -566,7 +567,7 @@
                                 <p>Coordinating event logistics and planning for IEEE KJSIT.</p>
                                 <div class="admin-social">
                                     <a href="https://www.linkedin.com/in/roshan-rawat-42b0362b1"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="https://www.instagram.com/__rawatttt?igsh=dmlvYXNveHNlbDYw&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/__rawatttt?igsh=dmlvYXNteTQ5MmU1"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -644,14 +645,14 @@
                     <div class="admin-member" data-aos="fade-up">
                         <div class="admin-content">
                             <div class="admin-image">
-                                <img src="../assets/images/team/dummy.jpeg" alt="Joint DCT Admin">
+                                <img src="team photos/Jt. Admins/divya.jpg" alt="Joint DCT Admin">
                             </div>
                             <div class="admin-info">
                                 <h3>Divya Ghanekar</h3>
                                 <span>Joint DCT Admin</span>
                                 <p>Assisting with digital content creation and cinematography for IEEE KJSIT.</p>
                                 <div class="admin-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="http://www.linkedin.com/in/divya-ghanekar-137252317"><i class="fab fa-linkedin-in"></i></a>
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
@@ -899,11 +900,30 @@
         // Navigation toggle
         var sidemenu = document.getElementById("sidemenu");
         function openmenu() {
-            sidemenu.style.right = "0";
+            document.querySelector("nav ul").style.right = "0";
+            document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
         }
         function closemenu() {
-            sidemenu.style.right = "-200px";
+            document.querySelector("nav ul").style.right = "-250px"; // Match the width in CSS
+            document.body.style.overflow = "auto"; // Re-enable scrolling when menu is closed
         }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const sideMenu = document.querySelector("nav ul");
+            const menuToggle = document.querySelector(".menu-toggle");
+            
+            if (!sideMenu.contains(event.target) && event.target !== menuToggle && sideMenu.style.right === "0px") {
+                closemenu();
+            }
+        });
+        
+        // Close menu when pressing escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && document.querySelector("nav ul").style.right === "0px") {
+                closemenu();
+            }
+        });
         
         // Initialize particles.js
         particlesJS("particles-js", {

@@ -34,9 +34,11 @@
                         <li><a href="../team/team.html">Team</a></li>
                         <li><a href="../events/events.html">Events</a></li>
                         <li><a href="#" class="active">Legacy</a></li>
-                        <!-- <i class="ic fa-light fa-xmark" onclick="closemenu()"></i> -->
+                        <i class="fas fa-times close-icon" onclick="closemenu()"></i>
                     </ul>
-                    <!-- <i class="ic fa-solid fa-bars" onclick="openmenu()"></i> -->
+                    <div class="menu-toggle" onclick="openmenu()">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -116,12 +118,32 @@
     
         var sidemenu=document.getElementById("sidemenu")
     
-        function openmenu(){
-            sidemenu.style.right="0";
+        function openmenu() {
+            document.getElementById("sidemenu").style.right = "0";
+            document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
         }
-        function closemenu(){
-            sidemenu.style.right="-200px";
+        
+        function closemenu() {
+            document.getElementById("sidemenu").style.right = "-250px"; // Match the width in CSS
+            document.body.style.overflow = "auto"; // Re-enable scrolling when menu is closed
         }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const sideMenu = document.getElementById("sidemenu");
+            const menuToggle = document.querySelector(".menu-toggle");
+            
+            if (!sideMenu.contains(event.target) && event.target !== menuToggle && sideMenu.style.right === "0px") {
+                closemenu();
+            }
+        });
+        
+        // Close menu when pressing escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && document.getElementById("sidemenu").style.right === "0px") {
+                closemenu();
+            }
+        });
     </script>
 </body>
 </html>

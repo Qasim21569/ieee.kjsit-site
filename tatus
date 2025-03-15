@@ -1,0 +1,11 @@
+[33mcommit fe09584c36f880c00d3bcb83023ef07063703bc1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Qasim21569 <qasim.k@somaiya.edu>
+Date:   Sat Mar 15 08:51:46 2025 +0530
+
+    Update legacy and events pages, remove unused file
+
+M	Legacy/legacy.css
+M	Legacy/legacy.html
+M	events/events.css
+M	events/events.html
+D	try.html
