@@ -897,32 +897,61 @@
             once: true
         });
 
-        // Navigation toggle
-        var sidemenu = document.getElementById("sidemenu");
-        function openmenu() {
-            document.querySelector("nav ul").style.right = "0";
-            document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
-        }
-        function closemenu() {
-            document.querySelector("nav ul").style.right = "-250px"; // Match the width in CSS
-            document.body.style.overflow = "auto"; // Re-enable scrolling when menu is closed
-        }
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const sideMenu = document.querySelector("nav ul");
+        // Navigation toggle - Fixed for mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get elements once and store them
+            const sidemenu = document.getElementById("sidemenu");
             const menuToggle = document.querySelector(".menu-toggle");
+            const closeIcon = document.querySelector(".close-icon");
             
-            if (!sideMenu.contains(event.target) && event.target !== menuToggle && sideMenu.style.right === "0px") {
-                closemenu();
+            // Add touch events specifically for mobile
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent event bubbling
+                    openmenu();
+                });
             }
-        });
-        
-        // Close menu when pressing escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape" && document.querySelector("nav ul").style.right === "0px") {
-                closemenu();
+            
+            if (closeIcon) {
+                closeIcon.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent event bubbling
+                    closemenu();
+                });
             }
+            
+            function openmenu() {
+                if (sidemenu) {
+                    sidemenu.style.right = "0";
+                    document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
+                }
+            }
+            
+            function closemenu() {
+                if (sidemenu) {
+                    sidemenu.style.right = "-250px"; // Match the width in CSS
+                    document.body.style.overflow = "auto"; // Re-enable scrolling when menu is closed
+                }
+            }
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (sidemenu && sidemenu.style.right === "0px" && 
+                    !sidemenu.contains(event.target) && 
+                    event.target !== menuToggle) {
+                    closemenu();
+                }
+            });
+            
+            // Close menu when pressing escape key
+            document.addEventListener('keydown', function(event) {
+                if (sidemenu && event.key === "Escape" && sidemenu.style.right === "0px") {
+                    closemenu();
+                }
+            });
+            
+            // Make openmenu and closemenu available globally
+            window.openmenu = openmenu;
+            window.closemenu = closemenu;
         });
         
         // Initialize particles.js

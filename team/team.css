@@ -112,6 +112,7 @@ nav ul li a.active::after {
     cursor: pointer;
     font-size: 24px;
     color: var(--white);
+    padding: 10px;
 }
 
 .close-icon {
@@ -122,6 +123,12 @@ nav ul li a.active::after {
     color: var(--white);
     cursor: pointer;
     display: none;
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Team Hero Section */
@@ -421,6 +428,7 @@ nav ul li a.active::after {
     margin-bottom: 20px;
     border: 5px solid var(--background-color);
     background-color: var(--background-color);
+    max-width: 100%;
 }
 
 .team-member-front h3 {
@@ -1000,6 +1008,12 @@ nav ul li a.active::after {
     .menu-toggle {
         display: block;
         z-index: 999;
+        padding: 10px;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .close-icon {
@@ -1041,9 +1055,12 @@ nav ul li a.active::after {
         gap: 15px;
     }
     
-    .team-row, .sub-core-row {
+    .team-row, 
+    .sub-core-row,
+    .admin-row {
         grid-template-columns: 1fr;
         gap: 20px;
+        justify-items: center;
     }
     
     .domain-teams {
@@ -1057,6 +1074,7 @@ nav ul li a.active::after {
         max-width: 400px;
         margin: 0 auto;
         width: 100%;
+        justify-self: center;
     }
     
     .team-member-front img {
@@ -1109,11 +1127,22 @@ nav ul li a.active::after {
     
     .team-member {
         height: 320px;
+        margin: 0 auto 20px;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .team-row-center .team-member,
+    .admin-row-center .admin-member {
+        margin: 0 auto 20px;
     }
     
     .team-member-front img {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
+        object-fit: contain;
+        background-color: var(--background-color);
+        border: 3px solid var(--background-color);
     }
     
     .team-member-front h3 {
