@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/Images/favicon/apple-touch-icon.png">
@@ -35,9 +35,9 @@
                     <li><a href="#team-hero" class="active">Team</a></li>
                     <li><a href="../events/events.html">Events</a></li>
                     <li><a href="../Legacy/legacy.html">Legacy</a></li>
-                    <i class="fas fa-times close-icon" onclick="closemenu()"></i>
+                    <i class="fas fa-times close-icon" id="close-menu-btn"></i>
                 </ul>
-                <div class="menu-toggle" onclick="openmenu()">
+                <div class="menu-toggle" id="open-menu-btn">
                     <i class="fas fa-bars"></i>
                 </div>
             </nav>
@@ -897,61 +897,68 @@
             once: true
         });
 
-        // Navigation toggle - Fixed for mobile
+        // Wait for the DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
-            // Get elements once and store them
+            // Get elements
             const sidemenu = document.getElementById("sidemenu");
-            const menuToggle = document.querySelector(".menu-toggle");
-            const closeIcon = document.querySelector(".close-icon");
+            const openMenuBtn = document.getElementById("open-menu-btn");
+            const closeMenuBtn = document.getElementById("close-menu-btn");
             
-            // Add touch events specifically for mobile
-            if (menuToggle) {
-                menuToggle.addEventListener('click', function(e) {
-                    e.stopPropagation(); // Prevent event bubbling
-                    openmenu();
+            // Function to open menu
+            function openMenu() {
+                sidemenu.style.right = "0";
+                document.body.style.overflow = "hidden"; // Prevent scrolling
+            }
+            
+            // Function to close menu
+            function closeMenu() {
+                sidemenu.style.right = "-250px";
+                document.body.style.overflow = "auto"; // Re-enable scrolling
+            }
+            
+            // Add event listeners with touchstart for mobile
+            if (openMenuBtn) {
+                // Add multiple event types for better mobile compatibility
+                ['click', 'touchstart'].forEach(function(evt) {
+                    openMenuBtn.addEventListener(evt, function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        openMenu();
+                    }, { passive: false });
                 });
             }
             
-            if (closeIcon) {
-                closeIcon.addEventListener('click', function(e) {
-                    e.stopPropagation(); // Prevent event bubbling
-                    closemenu();
+            if (closeMenuBtn) {
+                // Add multiple event types for better mobile compatibility
+                ['click', 'touchstart'].forEach(function(evt) {
+                    closeMenuBtn.addEventListener(evt, function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        closeMenu();
+                    }, { passive: false });
                 });
-            }
-            
-            function openmenu() {
-                if (sidemenu) {
-                    sidemenu.style.right = "0";
-                    document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
-                }
-            }
-            
-            function closemenu() {
-                if (sidemenu) {
-                    sidemenu.style.right = "-250px"; // Match the width in CSS
-                    document.body.style.overflow = "auto"; // Re-enable scrolling when menu is closed
-                }
             }
             
             // Close menu when clicking outside
             document.addEventListener('click', function(event) {
                 if (sidemenu && sidemenu.style.right === "0px" && 
                     !sidemenu.contains(event.target) && 
-                    event.target !== menuToggle) {
-                    closemenu();
+                    event.target !== openMenuBtn &&
+                    !openMenuBtn.contains(event.target)) {
+                    closeMenu();
                 }
             });
             
             // Close menu when pressing escape key
             document.addEventListener('keydown', function(event) {
                 if (sidemenu && event.key === "Escape" && sidemenu.style.right === "0px") {
-                    closemenu();
+                    closeMenu();
                 }
             });
             
-            // Make openmenu and closemenu available globally
-            window.openmenu = openmenu;
-            window.closemenu = closemenu;
+            // Make functions available globally
+            window.openMenu = openMenu;
+            window.closeMenu = closeMenu;
         });
         
         // Initialize particles.js
