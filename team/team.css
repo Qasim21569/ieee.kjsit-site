@@ -1008,7 +1008,7 @@ nav ul li a.active::after {
     }
     
     .menu-toggle {
-        display: block;
+   display: block;
         z-index: 999;
         padding: 10px;
         min-width: 44px;
@@ -1408,4 +1408,4 @@ img[src*="qasmv2.jpeg"] {
     .team-hero-subtitle {
         font-size: clamp(0.9rem, 3vw, 1.4rem);
     }
-}
+ }
