@@ -3,361 +3,479 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <!-- FAVICON -->
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/Images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/Images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/Images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/Images/favicon/site.webmanifest">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/Images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/Images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/Images/favicon/site.webmanifest">
+    <title>IEEE KJSIT - Events</title>
 
-    <title>IEEE-KJSIEIT</title>
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    
-     <!--     Fonts and icons     -->
-     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-    
-    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="events.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-    <script src="https://kit.fontawesome.com/85bfee30af.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-        <!-- HEADER SECTION -->
-        <div id="header">
-            <div class="container">
-                <nav>
-                    <div class="logo">
-                        <img src="../assets/logo-black.PNG" alt="IEEE KJSIT Logo">
-                    </div>
-                    <!-- <img src="images/logo.png" class="logo"> -->
-                    <ul id="sidemenu">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../index.html#about">About</a></li>
-                        <li><a href="../team/team.html">Team</a></li>
-                        <li><a href="#" class="active">Events</a></li>
-                        <li><a href="../Legacy/legacy.html">Legacy</a></li>
-                        <i class="fas fa-times close-icon" onclick="closemenu()"></i>
-                    </ul>
-                    <div class="menu-toggle" onclick="openmenu()">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </nav>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="../assets/logo-black.PNG" alt="IEEE KJSIT Logo">
+                </div>
+                <ul id="sidemenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../team/team.html">Team</a></li>
+                    <li><a href="#events-hero" class="active">Events</a></li>
+                    <li><a href="../Legacy/legacy.html">Legacy</a></li>
+                    <i class="fas fa-times close-icon" id="close-menu-btn"></i>
+                </ul>
+                <div class="menu-toggle" id="open-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Events Hero Section -->
+    <section class="events-hero" id="events-hero">
+        <div class="particles-container" id="particles-js"></div>
+        <div class="events-hero-content">
+            <div class="tenure-badge" data-aos="fade-down">
+                <span>IEEE KJSIT 2024-25</span>
+            </div>
+            <h1 class="events-hero-title" data-aos="fade-up">
+                <span class="text-gradient">Innovative</span><br>
+                Events & Competitions
+            </h1>
+            <div class="events-hero-divider" data-aos="fade-up" data-aos-delay="100"></div>
+            <p class="events-hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Discover our exciting technical events that challenge your skills and expand your horizons
+            </p>
+            <div class="hero-scroll-indicator" data-aos="fade-up" data-aos-delay="400">
+                <span>Scroll to Explore</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
-           
-    <!-- END HEADER SECTION -->
+        <div class="events-hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
 
-    
-
-    <!-- CONTENT -->
-
-
-    <section id="events" class="events_wrapper">
+    <!-- Featured Events Section -->
+    <section class="featured-events-section">
         <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Events</h2>
+            
+            <!-- AI Saga Event -->
+            <div class="event-card" data-aos="fade-up">
+                <div class="event-image">
+                    <img src="../assets/images/events/ai-saga.jpg" alt="AI Saga">
+                    <div class="event-date">
+                        <span class="month">APR</span>
+                        <span class="day">15</span>
+                    </div>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">AI Saga</h3>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> KJSIT Auditorium</span>
+                        <span><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM</span>
+                    </div>
+                    <p class="event-description">
+                        A competition to find the top prompt creator for AI tools, testing efficiency, scenario simulation, and creativity.
+                    </p>
+                    <div class="event-rounds">
+                        <h4>Rounds:</h4>
+                        <ul>
+                            <li><strong>Prompt Efficiency:</strong> Complete a task with one prompt (summary, letter)</li>
+                            <li><strong>Scenario Simulation:</strong> Develop prompts for complex real-world scenarios (job interview)</li>
+                            <li><strong>Creativity:</strong> Create imaginative prompts for story writing or poetry</li>
+                            <li><strong>Finale:</strong> Create a stunning image or make an AI voiceover to bag the winner prize</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn-register">Register Now</a>
+                </div>
+            </div>
+            
+            <!-- Tech Trivia Event -->
+            <div class="event-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="event-image">
+                    <img src="../assets/images/events/tech-trivia.jpg" alt="Tech Trivia">
+                    <div class="event-date">
+                        <span class="month">MAY</span>
+                        <span class="day">10</span>
+                    </div>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">Tech Trivia</h3>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> KJSIT Seminar Hall</span>
+                        <span><i class="fas fa-clock"></i> 1:00 PM - 3:30 PM</span>
+                    </div>
+                    <p class="event-description">
+                        A dynamic competition designed for 40-60 participants or teams, with four rounds of increasing difficulty.
+                    </p>
+                    <div class="event-rounds">
+                        <h4>Rounds:</h4>
+                        <ul>
+                            <li><strong>Multiple-Choice:</strong> Questions on tech basics and fundamentals</li>
+                            <li><strong>Code Deciphering:</strong> Focus on programming logic and understanding</li>
+                            <li><strong>Tech Pictionary:</strong> Visual round where participants identify tech-related images</li>
+                            <li><strong>Rapid-Fire Buzzer:</strong> Advanced tech topics with quick response time</li>
+                        </ul>
+                    </div>
+                    <p class="event-note">Event duration: 2-2.5 hours, with prizes for top performers!</p>
+                    <a href="#" class="btn-register">Register Now</a>
+                </div>
+            </div>
+            
+            <!-- Tech Stake Event -->
+            <div class="event-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="event-image">
+                    <img src="../assets/images/events/tech-stake.jpg" alt="Tech Stake">
+                    <div class="event-date">
+                        <span class="month">JUN</span>
+                        <span class="day">05</span>
+                    </div>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">Tech Stake</h3>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> KJSIT Computer Labs</span>
+                        <span><i class="fas fa-clock"></i> 9:00 AM - 5:00 PM</span>
+                    </div>
+                    <p class="event-description">
+                        A thrilling technical coding event where the stakes rise with every challenge! As participants solve increasingly complex problems, the risk and rewards grow higher.
+                    </p>
+                    <div class="event-highlights">
+                        <h4>Highlights:</h4>
+                        <ul>
+                            <li>Progressive difficulty levels with increasing rewards</li>
+                            <li>Strategic decision-making: play it safe or risk it all</li>
+                            <li>Real-time leaderboard updates</li>
+                            <li>Challenging coding problems across various domains</li>
+                            <li>Exciting prizes for top performers</li>
+                        </ul>
+                    </div>
+                    <p class="event-tagline">Will you play it safe or push your limits to climb the leaderboard? Test your skills, strategy, and nerve in this dynamic coding showdown!</p>
+                    <a href="#" class="btn-register">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Card deck -->
-            <div class="card-deck row">
-            
-              <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card">
-            
-                <!--Card image-->
-                <div class="view overlay">
-                  <img class="card-img-top" src="../assets/images/events/dummy.jpeg" alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-            
-                <!--Card content-->
-                <div class="card-body">
-            
-                  <!--Title-->
-                  <h4 class="card-title">AR/VR Experience</h4>
-                  <!--Text-->
-                  <p class="card-text">With the Occulus Voyayge2 we bring you the most authentic AR & VR Experience to thrill your senses.</p>
-                  
-                  <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-            
-                </div>
-            
-              </div>
-              <!-- Card -->
-              </div>
-            
-              <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card mb-4">
-            
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="../assets/images/events/dummy.jpeg" alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-            
-                <!--Card content-->
-                <div class="card-body">
-            
-                  <!--Title-->
-                  <h4 class="card-title">Beg Borrow Steal</h4>
-                  <!--Text-->
-                  <p class="card-text">Can you Beg, Borrow & Steal! to reach your GOAL?. Think smartly & look before you leap!</p>
-                  
-                  <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-            
-                </div>
-            
-              </div>
-              <!-- Card -->
-            </div>
-            
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card mb-4">
-            
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="../assets/images/events/dummy.jpeg" alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-            
-                <!--Card content-->
-                <div class="card-body">
-            
-                  <!--Title-->
-                  <h4 class="card-title">Death Race</h4>
-                  <!--Text-->
-                  <p class="card-text">Here the race starts from a dead car and then you have to keep it pretty much alive.</p>
-                  
-                  <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-            
-                </div>
-            
-              </div>
-              <!-- Card -->
-            </div>
-            
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card">
-            
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="../assets/images/events/dummy.jpeg" alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-            
-                <!--Card content-->
-                <div class="card-body">
-            
-                  <!--Title-->
-                  <h4 class="card-title">FIFA</h4>
-                  <!--Text-->
-                  <p class="card-text">What is more exciting after some real football......Some more awesome real football FIFA!!</p>
-                  
-                  <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-            
-                </div>
-            
-              </div>
-              <!-- Card -->
-            </div>
-             
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card mb-4">
-            
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="../assets/images/events/dummy.jpeg" alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-            
-                <!--Card content-->
-                <div class="card-body">
-            
-                  <!--Title-->
-                  <h4 class="card-title">Poster Presentation</h4>
-                  <!--Text-->
-                  <p class="card-text">Get to learn & experience some Professional Presentations by Some Very Professional Personnels!</p>
-                  
-                  <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-            
-                </div>
-            
-              </div>
-              <!-- Card -->
-            </div>
-            
-            <div class="col-xs-12 col-sm-6 col-md-4">  
-              <!-- Card -->
-              <div class="card mb-4">
-            
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="../assets/images/events/dummy.jpeg" alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-            
-                <!--Card content-->
-                <div class="card-body">
-            
-                  <!--Title-->
-                  <h4 class="card-title">Technical Paper Presentation</h4>
-                  <!--Text-->
-                  <p class="card-text">The core potential & achievement of IEEE, it's RESEARCH PAPERS. Do Learn from this event </p>
-                  
-                  <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-            
-                </div>
-            
-              </div>
-              <!-- Card -->
-            </div>
-            
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card mb-4">
-            
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="../assets/images/events/dummy.jpeg" alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-            
-                <!--Card content-->
-                <div class="card-body">
-            
-                  <!--Title-->
-                  <h4 class="card-title">Treasure Hunt</h4>
-                  <!--Text-->
-                  <p class="card-text">Time to be the Captain Jack Sparrow you always wanted to be!</p>
-                  
-                  <!-- <button type="button" class="btn btn-light-blue btn-md">Read more</button> -->
-            
-                </div>
-            
-              </div>
-              <!-- Card -->
-            </div>  
-            
-              
-            </div>
-            <!-- Card deck -->
-              
-            </div>
-      </section>
-
-    <!-- CONTACT -->
-    <div id="contact">
+    <!-- Past Events Section -->
+    <section class="past-events-section bg-light">
         <div class="container">
-            <div class="row">
+            <h2 class="section-title" data-aos="fade-up">Past Events</h2>
+            
+            <div class="events-grid">
+                <!-- AR/VR Experience -->
+                <div class="past-event-card" data-aos="fade-up">
+                    <div class="past-event-image">
+                        <img src="../assets/images/events/ar-vr.jpg" alt="AR/VR Experience">
+                    </div>
+                    <div class="past-event-content">
+                        <h3>AR/VR Experience</h3>
+                        <p>With the Oculus Voyage2 we brought the most authentic AR & VR Experience to thrill your senses.</p>
+                    </div>
+                </div>
+                
+                <!-- Death Race -->
+                <div class="past-event-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="past-event-image">
+                        <img src="../assets/images/events/death-race.jpg" alt="Death Race">
+                    </div>
+                    <div class="past-event-content">
+                        <h3>Death Race</h3>
+                        <p>The race started from a dead car and participants had to keep it pretty much alive throughout the competition.</p>
+                    </div>
+                </div>
+                
+                <!-- FIFA -->
+                <div class="past-event-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="past-event-image">
+                        <img src="../assets/images/events/fifa.jpg" alt="FIFA">
+                    </div>
+                    <div class="past-event-content">
+                        <h3>FIFA</h3>
+                        <p>What is more exciting after some real football? Some more awesome virtual football with FIFA!</p>
+                    </div>
+                </div>
+                
+                <!-- Technical Paper Presentation -->
+                <div class="past-event-card" data-aos="fade-up">
+                    <div class="past-event-image">
+                        <img src="../assets/images/events/tpp.jpg" alt="Technical Paper Presentation">
+                    </div>
+                    <div class="past-event-content">
+                        <h3>Technical Paper Presentation</h3>
+                        <p>The core potential & achievement of IEEE, it's RESEARCH PAPERS. Students presented their innovative ideas.</p>
+                    </div>
+                </div>
+                
+                <!-- Treasure Hunt -->
+                <div class="past-event-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="past-event-image">
+                        <img src="../assets/images/events/treasure-hunt.jpg" alt="Treasure Hunt">
+                    </div>
+                    <div class="past-event-content">
+                        <h3>Treasure Hunt</h3>
+                        <p>Time to be the Captain Jack Sparrow you always wanted to be! An exciting hunt across the campus.</p>
+                    </div>
+                </div>
+                
+                <!-- Beg Borrow Steal -->
+                <div class="past-event-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="past-event-image">
+                        <img src="../assets/images/events/beg-borrow-steal.jpg" alt="Beg Borrow Steal">
+                    </div>
+                    <div class="past-event-content">
+                        <h3>Beg Borrow Steal</h3>
+                        <p>Can you Beg, Borrow & Steal to reach your GOAL? Participants thought smartly & looked before they leaped!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="join-section">
+        <div class="join-container">
+            <h2 data-aos="fade-up">Want to Participate?</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Register for our upcoming events and showcase your technical skills.</p>
+            <a href="#" class="btn-primary" data-aos="fade-up" data-aos-delay="200">Register Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/logo-black.PNG" alt="IEEE KJSIT Logo">
+                </div>
                 <div class="contact-left">
-                    
-                    <h1 class=" title-foot">IEEE - KJSIT</h1>
+                    <h1 class="title-foot">IEEE - KJSIT</h1>
                     <div class="link-foot">
-                        <!-- <p class="footer-links">
+                        <div class="footer-links">
                             <ul>
-                                <li><a href="#" class="tab-links">Team</a></li>
-                                <li><a href="#"  class="tab-links">Events</a></li>
-                                <li><a href="#" class="tab-links">Legacy</a></li>
+                                <li><a href="../index.html" class="tab-links">Home</a></li>
+                                <li><a href="../index.html#about" class="tab-links">About</a></li>
+                                <li><a href="../team/team.html" class="tab-links">Team</a></li>
+                                <li><a href="#events-hero" class="tab-links">Events</a></li>
+                                <li><a href="../Legacy/legacy.html" class="tab-links">Legacy</a></li>
                             </ul>
-                            
-                            
-                            
-                            <a href="#" class="tab-links">About</a>         -->
-                        <!-- </p> -->
+                        </div>
                     </div>
-                    <p ><a href="mailto:ieee.tech@somaiya.edu"  style="text-decoration:none"><i class="fa-sharp fa-solid fa-paper-plane"></i>ieee.tech@somaiya.edu</a></p>
-                    <p><a href="https://www.google.com/maps/place/K.+J.+Somaiya+Institute+of+Technology/@19.046058,72.8329721,14z/data=!4m10!1m2!2m1!1skjsit!3m6!1s0x3be7cf21727f6e19:0x473006136ad440dc!8m2!3d19.046058!4d72.8710809!15sCgVranNpdFoHIgVranNpdJIBB2NvbGxlZ2WaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTlhhMDkxWmtoUkVBReABAA!16s%2Fm%2F07k7k3v?entry=ttu" style="text-decoration:none"></a><i class="fa-solid fa-location-dot"></i></i>K. J. Somaiya Institute of Technology, Mumbai-22.</a></p>
+                    <div class="contact-info">
+                        <p><a href="mailto:ieee.tech@somaiya.edu" style="text-decoration:none"><i class="fa-sharp fa-solid fa-paper-plane"></i>ieee.tech@somaiya.edu</a></p>
+                        <p><a href="https://www.google.com/maps/place/K.+J.+Somaiya+Institute+of+Technology" style="text-decoration:none"><i class="fa-solid fa-location-dot"></i>K. J. Somaiya Institute of Technology, Mumbai-22.</a></p>
+                    </div>
                     <div class="social-icons">
-                        <!-- <div class="footer-icons"> -->
-                            <a href="https://www.instagram.com/ieee.kjsit?igsh=MWJieHY3YXZ2NDVucA=="  target="_blank"><i class="fa-brands fa-instagram in" ></i></a>
-                            <a href="https://www.linkedin.com/company/ieee-kjsieit/"  target="_blank"><i class="fa-brands fa-linkedin ln"></i></a>
-                            <a href="https://www.facebook.com/IEEEKJSIEIT/"  target="_blank"><i class="fa-brands fa-facebook fb" ></i></a>
-                            <a href="https://mobile.twitter.com/ieee_kjsieit"  target="_blank"><i class="fa-brands fa-twitter tw"></i></a>
-                        <!-- </div> -->
-        
+                        <a href="https://www.instagram.com/ieee.kjsit?igsh=MWJieHY3YXZ2NDVucA==" target="_blank"><i class="fa-brands fa-instagram in"></i></a>
+                        <a href="https://www.linkedin.com/company/ieee-kjsieit/" target="_blank"><i class="fa-brands fa-linkedin ln"></i></a>
+                        <a href="https://www.facebook.com/IEEEKJSIEIT/" target="_blank"><i class="fa-brands fa-facebook fb"></i></a>
+                        <a href="https://twitter.com/ieee_kjsieit" target="_blank"><i class="fa-brands fa-twitter tw"></i></a>
                     </div>
-                    <a href="assets/doc/IEEE+21-22.pdf" download class=" btn-2" >More Details</a>
-                </div>
-                <div class="contact-right">
-                    <form >
-                        <input type="text" name="name" placeholder="Your name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
-                        <button type="submit" class="btn-2">Submit</button>
-                    </form>
                 </div>
             </div>
         </div>
         <div class="copyright">
-            <p> <i class="fa-regular fa-copyright"></i>  IEEE - KJSIT  2023 - 24.</p>
+            <p><i class="fa-regular fa-copyright"></i> IEEE - KJSIT 2024 - 25</p>
             <p class="developer-credit">Designed and Developed by <span class="text-gradient">Qasim Kharodia</span></p>
         </div>
-    </div>	
+    </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        var tablinks=document.getElementsByClassName("tab-links");
-        var tabcontents=document.getElementsByClassName("tab-contents");
-    
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link")
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab")
-            }
-            event.currentTarget.classList.add("active-link")
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-    </script>
-    
-    <script>
-    
-        var sidemenu=document.getElementById("sidemenu")
-    
-        function openmenu() {
-            document.getElementById("sidemenu").style.right = "0";
-            document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
-        }
-        
-        function closemenu() {
-            document.getElementById("sidemenu").style.right = "-250px"; // Match the width in CSS
-            document.body.style.overflow = "auto"; // Re-enable scrolling when menu is closed
-        }
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const sideMenu = document.getElementById("sidemenu");
-            const menuToggle = document.querySelector(".menu-toggle");
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get elements
+            const sidemenu = document.getElementById("sidemenu");
+            const openMenuBtn = document.getElementById("open-menu-btn");
+            const closeMenuBtn = document.getElementById("close-menu-btn");
             
-            if (!sideMenu.contains(event.target) && event.target !== menuToggle && sideMenu.style.right === "0px") {
-                closemenu();
+            // Function to open menu
+            function openMenu() {
+                sidemenu.style.right = "0";
+                document.body.style.overflow = "hidden"; // Prevent scrolling
             }
+            
+            // Function to close menu
+            function closeMenu() {
+                sidemenu.style.right = "-250px";
+                document.body.style.overflow = "auto"; // Re-enable scrolling
+            }
+            
+            // Add event listeners with touchstart for mobile
+            if (openMenuBtn) {
+                // Add multiple event types for better mobile compatibility
+                ['click', 'touchstart'].forEach(function(evt) {
+                    openMenuBtn.addEventListener(evt, function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        openMenu();
+                    }, { passive: false });
+                });
+            }
+            
+            if (closeMenuBtn) {
+                // Add multiple event types for better mobile compatibility
+                ['click', 'touchstart'].forEach(function(evt) {
+                    closeMenuBtn.addEventListener(evt, function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        closeMenu();
+                    }, { passive: false });
+                });
+            }
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (sidemenu && sidemenu.style.right === "0px" && 
+                    !sidemenu.contains(event.target) && 
+                    event.target !== openMenuBtn &&
+                    !openMenuBtn.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+            
+            // Close menu when pressing escape key
+            document.addEventListener('keydown', function(event) {
+                if (sidemenu && event.key === "Escape" && sidemenu.style.right === "0px") {
+                    closeMenu();
+                }
+            });
+            
+            // Make functions available globally
+            window.openMenu = openMenu;
+            window.closeMenu = closeMenu;
         });
         
-        // Close menu when pressing escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape" && document.getElementById("sidemenu").style.right === "0px") {
-                closemenu();
-            }
+        // Initialize particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
         });
     </script>
 </body>
