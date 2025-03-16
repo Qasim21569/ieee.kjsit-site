@@ -880,8 +880,9 @@ nav .ic{
 }
 
 .tenure-badge span {
-    font-size: 14px;
+    color: var(--gold);
     font-weight: 600;
+    font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }

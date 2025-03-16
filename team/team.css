@@ -177,7 +177,7 @@ nav ul li a.active::after {
 }
 
 .tenure-badge span {
-    color: var(--white);
+    color: var(--gold);
     font-weight: 600;
     font-size: 1.1rem;
     letter-spacing: 2px;
